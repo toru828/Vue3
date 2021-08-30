@@ -10,33 +10,24 @@
 import { defineComponent, computed } from "vue";
 import Loading from "./components/Loading.vue";
 import { useGlobalStore } from "@/stores/Global";
-import { provide } from 'vue';
 
 export default defineComponent({
   name: "Home",
   components: {
     Loading,
   },
-  setup() {
-    const globalStore = useGlobalStore();
-    const loading1 = computed(() => globalStore.loading);
-
-    provide('loading2', loading1)
-  },
   // setup() {
   //   const globalStore = useGlobalStore();
-  //   const loading = computed(() => globalStore.loading);
+  //   const loading1 = computed(() => globalStore.loading);
 
-  //   return {
-  //     loading,
-  //   };
+  //   provide('loading2', loading1)
   // },
-  // provide() {
-  //   const globalStore = useGlobalStore();
-  //   return {
-  //     loading: () => computed(() => globalStore.loading),
-  //   };
-  // },
+  provide() {
+    const globalStore = useGlobalStore();
+    return {
+      loading: () => computed(() => globalStore.loading),
+    };
+  },
 });
 </script>
 
