@@ -1,5 +1,5 @@
 <template>
-  <Loading :loading="loading" />
+  <Loading />
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
@@ -16,12 +16,16 @@ export default defineComponent({
   components: {
     Loading,
   },
-  setup() {
-    const globalStore = useGlobalStore();
-    const loading = computed(() => globalStore.loading);
+  // setup() {
+  //   const globalStore = useGlobalStore();
+  //   const loading1 = computed(() => globalStore.loading);
 
+  //   provide('loading2', loading1)
+  // },
+  provide() {
+    const globalStore = useGlobalStore();
     return {
-      loading,
+      loading: () => computed(() => globalStore.loading),
     };
   },
 });

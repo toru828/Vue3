@@ -8,7 +8,14 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  props: ["loading"],
+  // props: ["loading"],
+  inject: ["loading"],
+  // setup() {
+  //   const loading = inject('loading2')
+  //   return {
+  //     loading,
+  //   }
+  // },
 });
 </script>
 
