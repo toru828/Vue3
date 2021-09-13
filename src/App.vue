@@ -19,24 +19,9 @@ export default defineComponent({
   },
   setup() {
     const globalStore = useGlobalStore();
-    const loading1 = computed(() => globalStore.loading);
-
-    provide('loading2', loading1)
+    const loading = computed(() => globalStore.loading);
+    provide('loading', loading)
   },
-  // setup() {
-  //   const globalStore = useGlobalStore();
-  //   const loading = computed(() => globalStore.loading);
-
-  //   return {
-  //     loading,
-  //   };
-  // },
-  // provide() {
-  //   const globalStore = useGlobalStore();
-  //   return {
-  //     loading: () => computed(() => globalStore.loading),
-  //   };
-  // },
 });
 </script>
 

@@ -9,10 +9,8 @@ import { defineComponent } from "vue";
 import { inject } from "vue";
 
 export default defineComponent({
-  // props: ["loading"],
-  // inject: ["loading"],
   setup() {
-    const loading = inject("loading2");
+    const loading = inject("loading");
     return {
       loading,
     }

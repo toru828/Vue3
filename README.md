@@ -20,6 +20,8 @@ When you click the button in the components of "InjectedDecrementButton.vue" and
 the function of "asyncIncrement" and "asyncDecrement" starts to work.
 These functions let the "loading status" be "true" and "false".
 Btw, these functions are in the stores of "Counter.ts".
+When the "loading status" be "true", the style for "lds-circle" in "Loading.vue" starts to work.
+So, we can see the view is loading.
 
 
 
