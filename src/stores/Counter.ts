@@ -39,6 +39,10 @@ export function counterStore(): CounterStoreType {
       globalStore.loading = true;
       setTimeout(() => {
         globalStore.loading = false;
+        if (state.count === 5) {
+          alert('Value is not greater than 5');
+          return;
+        }
         state.count += 1;
       }, 1000);
     },
@@ -47,6 +51,10 @@ export function counterStore(): CounterStoreType {
       globalStore.loading = true;
       setTimeout(() => {
         globalStore.loading = false;
+        if (state.count === -5) {
+          alert('Value is not less than -5');
+          return;
+        }
         state.count -= 1;
       }, 1000);
     },

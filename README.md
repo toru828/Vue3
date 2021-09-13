@@ -1,34 +1,42 @@
-# test
+# Homework for Vue3
 
-## Project setup
-```
-yarn install
-```
+### homework for Composition API Introduction
+1.Lets build sample app in sample-vue-app folder, follow steps in README file. After build successfully, your browser will be:
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+You can check my folder.
 
-### Compiles and minifies for production
-```
-yarn build
-```
 
-### Run your unit tests
-```
-yarn test:unit
-```
 
-### Run your end-to-end tests
-```
-yarn test:e2e
-```
+### homework for API-Store-Component
+1.Where is API module, Store module and Component module?
 
-### Lints and fixes files
-```
-yarn lint
-```
+The Store module is in src/stores and the Component module is in src components.
+But we don't have API module in this folder.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+2.How does the Loading work? (When you click on button - or +, loading will be displayed).
+
+When you click the button in the components of "InjectedDecrementButton.vue" and "InjectedIncrementButton.vue",
+the function of "asyncIncrement" and "asyncDecrement" starts to work.
+These functions let the "loading status" be "true" and "false".
+Btw, these functions are in the stores of "Counter.ts".
+When the "loading status" be "true", the style for "lds-circle" in "Loading.vue" starts to work.
+So, we can see the view is loading.
+
+
+
+### homework for Provide-Inject
+1.As you investigated loading function in last homework, lets implement according to Provide-inject for it. (Now, App.vue is passing data to Loading.vue as props.)
+
+
+You can check my folder for "for homework3" commit.
+
+
+
+### homework for Reactive
+1.Comeback to sample-vue-app again, Lets implement new function: label value is required from -5 to 5, so:
+When increasing over 5, show alert "Value is not greater than 5"
+When descreasing below -5, show alert "Value is not less than -5"
+
+
+You can check my folder for "submit" commit.

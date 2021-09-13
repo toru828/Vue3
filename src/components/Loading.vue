@@ -6,9 +6,15 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { inject } from "vue";
 
 export default defineComponent({
-  props: ["loading"],
+  setup() {
+    const loading = inject("loading");
+    return {
+      loading,
+    }
+  },
 });
 </script>
 
